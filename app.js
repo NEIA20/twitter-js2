@@ -4,6 +4,7 @@ var volleyball = require("volleyball");
 var nunjucks = require("nunjucks");
 var routes = require('./routes/');
 var path = require("path");
+var bodyParser = require("body-parser");
 
 
 nunjucks.configure("views", { noCache: true });
@@ -16,6 +17,19 @@ app.listen(3000, function(){
 }) //usually at the bottom
 
 app.use(volleyball);
+
+// // parse application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: false }));
+
+// // parse application/json
+// app.use(bodyParser.json());
+
+// app.use(function (req, res) {
+//   res.setHeader('Content-Type', 'text/plain')
+//   res.write('you posted:\n')
+//   res.end(JSON.stringify(req.body, null, 2))
+// })
+
 
 // app.get("/stylesheets/style.css", function(req, res, next){
 //     console.log("render get stylesheets");

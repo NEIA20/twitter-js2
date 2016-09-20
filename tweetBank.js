@@ -1,11 +1,13 @@
 
 
 var _ = require("lodash");
+var id = 0;
 
-var data = [];
+var data = [{name: "Nimit Niz", content: "hey"}];
 
 function add(name, content){
-    data.push({name: name, content: content});
+    data.push({name: name, content: content, id: id++});
+
 }
 
 function list(){
@@ -57,6 +59,6 @@ for (var i = 0; i < 10; i++) {
 //     { name: 'Nimit Binder',
 //     content: 'Fullstack Academy is sweet! The instructors are just so cool' 
 //     }
-// console.log(data);
+console.log(data);
 //how does find work?
 //how does this work??????

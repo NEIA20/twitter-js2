@@ -17,10 +17,28 @@
     
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.content}}</li>
+        <h4>{{tweet.name}}</h4>
+        <p class="tweet-indent">{{tweet.content}}</p>
+        <div class="tweet-indent" >
+          <a href="/users/{{tweet.name}}">Re-tweet</a> 
+        </div>
+      
       {% endfor %}
       
     </div>
   </div>
+
+  {% if showForm %}
+  <form action="/tweets" method="POST">
+    <label for="name_field">Name:</label>
+    <input name="name" type="text" value = "{{name}}"" id="name_field"/>
+    
+
+    <label for="text_field">Text:</label>
+    <input name="text" type="text" id="text_field" style="width: 350px;" />
+
+    <input type="submit" value="Submit" />
+  </form>
+{% endif %}
     
 {% endblock %}

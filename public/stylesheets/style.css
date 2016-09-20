@@ -22,7 +22,9 @@ body {
   background-color: #f5f5f5;
 }
 
-
+.tweet-indent{
+    text-indent: 50px;
+}
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
