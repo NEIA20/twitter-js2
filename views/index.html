@@ -17,6 +17,7 @@
     
       <!-- display tweets here -->
       {% for tweet in tweets %}
+        <img src="{{tweet.pictureurl}}"/>
         <h4>{{tweet.name}}</h4>
         <p class="tweet-indent">{{tweet.content}}</p>
         <div class="tweet-indent" >

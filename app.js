@@ -19,10 +19,10 @@ app.listen(3000, function(){
 app.use(volleyball);
 
 // // parse application/x-www-form-urlencoded
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // // parse application/json
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 // app.use(function (req, res) {
 //   res.setHeader('Content-Type', 'text/plain')
